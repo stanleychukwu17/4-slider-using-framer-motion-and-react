@@ -1,36 +1,17 @@
 @forward '../../styles/globals/';
 @use '../../styles/util/' as u1;
 
-
-
-.test1 {
-    @include u1.media(">=desktop") {
-        background-color: yellow;
-
-        &::after {
-            content: "desktop"
-        }
-    }
-    @include u1.media(">=tablet", "<desktop") {
-        background-color: skyblue;
-
-        &::after {
-            content: "tablet"
-        }
-    }
-
-    @include u1.media(">=phone", "<tablet") {
-        background-color: aquamarine;
-
-        &::after {
-            content: "phone"
-        }
-    }
-}
-
 body {
-    background-color: #1F2326 !important;
+    background-color: #73132f !important;
+    color: #fcfdfc;
 }
 .AppMain {
     @include u1.block_display();
+
+    .AppTitle {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        padding: 40px 0;
+    }
 }
