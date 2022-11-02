@@ -15,18 +15,17 @@ const images = {img1, img2, img3, img4, img5, img6, img7, img8}
 
 // motion variant
 const cardVariant: {initial?: Variant, animate?: Variant} = {
-    // initial: (custom) => ({
-    //     y: -60, opacity:0,
-    //     x: (custom % 2 === 0) ? 50 : -50,
-    // }),
-    // animate: (custom) => ({
-    //     y:0, opacity:1, x:0,
-    //     transition: {
-    //         duration: .5,
-    //         delay: custom * 0.2,
-    //         ease: "easeOut"
-    //     }
-    // })
+    initial: (custom) => ({
+        y: -60, opacity:0,
+    }),
+    animate: (custom) => ({
+        y:0, opacity:1,
+        transition: {
+            duration: .5,
+            delay: custom * 0.2,
+            ease: "easeOut"
+        }
+    })
 };
 
 
@@ -35,7 +34,7 @@ const App = () => {
 
     return (
         <div className="AppMain">
-            <div className="AppTitle">STANLEY TO!</div>
+            <motion.div className="AppTitle" variants={cardVariant} initial="initial" animate="animate">STANLEY TO!</motion.div>
             <motion.div className="imgParent" ref={imgParentRef}>
                 <motion.div className="imgGeneral" drag="x" dragConstraints={imgParentRef} dragPropagation>
                     {Object.values(images).map((item, index) => {

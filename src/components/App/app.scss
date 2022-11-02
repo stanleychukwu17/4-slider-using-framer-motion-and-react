@@ -23,6 +23,10 @@ body {
         .imgGeneral {
             width: calc(27vw * 8);
             display: flex;
+            cursor: pointer;
+            &:active {
+                cursor: grab;
+            }
 
             .ImgCvr {
                 display: block;
