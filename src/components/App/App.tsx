@@ -1,5 +1,6 @@
 import './app.scss';
 import { motion, Variant } from 'framer-motion';
+import { useRef } from 'react';
 
 // import the assets we will be using
 import img1 from '../../assets/img1.jpg'
@@ -10,7 +11,6 @@ import img5 from '../../assets/img5.jpg'
 import img6 from '../../assets/img6.jpg'
 import img7 from '../../assets/img7.jpg'
 import img8 from '../../assets/img8.jpg'
-import { useRef } from 'react';
 const images = {img1, img2, img3, img4, img5, img6, img7, img8}
 
 // motion variant
